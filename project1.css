@@ -6,7 +6,12 @@ body {
     margin: 0;
     padding: 0;
 }
-
+body, html {
+  overflow-x: hidden; 
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 ul { 
     list-style: none;
  }
@@ -30,6 +35,11 @@ nav {
     background-color: #ffffff;
     box-shadow: 2px 2px 12px rgba(0, 0, 0, .2);
     padding: 0 5%;
+    position: fixed; 
+    top: 0;         
+    left: 0;         
+    width: 90%;       
+    z-index: 1000;  
 }
 
     nav ul {
@@ -165,7 +175,7 @@ border-color: transparent #ffffff;
     font-weight:bold;
     line-height: 5px;
 
-}
+} 
 .about-text p:nth-child(3),
 .about-text p:nth-child(4){
     font-family: calibri;
@@ -393,8 +403,7 @@ footer p:nth-child(2){
 
 }
 
-
-  @media(max-width: 1024px) {
+   @media(max-width: 1024px) {
     .model {
          display: none; 
         } 
@@ -449,24 +458,29 @@ footer p:nth-child(2){
 @media (max-width: 720px) {
   .menu-icon {
     display: block;
-      
-            background: #444;
-  }
-  nav{
-    width: 100%;
+    background: #444;
+    padding: 8px 12px;
   }
 
- .menu  {
+  .menu {
     display: none;
     flex-direction: column;
-        margin: 10px 20px;
-
-    margin-top: 10px;
-
+    position: fixed;
+    top: 50px; 
+    left: 0;
+    width: 100%;
+    background: rgba(33, 34, 34, 0.5); 
+    box-shadow: 0 4px 15px #807d7d; 
+    z-index:999;
+    opacity: 1; 
+   
+     
   }
 
-  #menu-toggle:checked + .menu-icon +  .menu  {
-    display:flex;
+ 
+
+  #menu-toggle:checked + .menu-icon + .menu {
+    display: flex;
   }
     .text-container p:nth-child(2) {
          font-size: 30px; 
@@ -475,6 +489,8 @@ footer p:nth-child(2){
     .about-text {
          max-width: 90%;
          }
+
+
    
     footer p:nth-child(2) { 
         max-width: 90%; 
@@ -500,6 +516,15 @@ footer p:nth-child(2){
     line-height: 1.5;
     word-break: break-word;
   }
+  .a-social-b {
+   display: none;
+  }
+} 
+body, html {
+  overflow-x: hidden !important;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 
